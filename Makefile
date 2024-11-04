@@ -1,5 +1,5 @@
 PHP_VERSION = 8.2.24
-LEGACY_CLI_VERSION = 4.21.0
+LEGACY_CLI_VERSION = 4.2.11
 
 GORELEASER_ID ?= platform
 
@@ -28,7 +28,7 @@ GORELEASER_VERSION=v1.26
 GOLANGCI_LINT_VERSION=v1.59
 
 internal/legacy/archives/platform.phar:
-	curl -L https://github.com/platformsh/legacy-cli/releases/download/v$(LEGACY_CLI_VERSION)/platform.phar -o internal/legacy/archives/platform.phar
+	curl -L https://github.com/dclawson/platformsh-legacy-cli/releases/download/$(LEGACY_CLI_VERSION)/platform.phar -o internal/legacy/archives/platform.phar
 
 internal/legacy/archives/php_windows_amd64: internal/legacy/archives/php_windows.zip internal/legacy/archives/cacert.pem
 
